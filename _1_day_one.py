@@ -4,16 +4,29 @@
 # calculate difference
 # add up total of all the differences
 
+f = open("files/day1.txt")
 
-def difference_calc(left, right):
-    left.sort()
-    right.sort()
+left = []
+right = []
 
-    pairs = zip(left, right)
+with open("files/day1.txt") as f:
+    for line in f:
+        left, right = line.split()
+
+        left.append(int(left))
+        right.append(int(right))
+
+left = []
+right = []
+
+
+left.sort()
+right.sort()
+
+pairs = zip(left, right)
     
-    total = 0
-    for a, b in pairs:
-       total += abs(a - b)
-
-    return total
+total = 0
+for a, b in pairs:
+    total += abs(a - b)
+print(total)
 
