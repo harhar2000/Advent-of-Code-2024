@@ -4,26 +4,25 @@
 # calculate difference
 # add up total of all the differences
 
-f = open("files/day1.txt")
+left_list = []
+right_list = []
 
-left = []
-right = []
 
 with open("files/day1.txt") as f:
     for line in f:
         left, right = line.split()
 
-        left.append(int(left))
-        right.append(int(right))
+        left_list.append(int(left))
+        right_list.append(int(right))
 
-left = []
-right = []
+# print("Left list:", left_list)
+# print("Right list:", right_list)
 
 
-left.sort()
-right.sort()
+left_list.sort()
+right_list.sort()
 
-pairs = zip(left, right)
+pairs = zip(left_list, right_list)
     
 total = 0
 for a, b in pairs:
