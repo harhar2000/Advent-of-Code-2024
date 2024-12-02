@@ -11,10 +11,9 @@ def difference_calc(left, right):
 
     pairs = zip(left, right)
     
-
+    total = 0
     for a, b in pairs:
-       difference = abs(a -b)
+       total += abs(a - b)
 
+    return total
 
-
- 
