@@ -27,7 +27,7 @@ left_list = []
 right_list = []
 
 
-with open("files/day1.txt") as f:
+with open("2024/files/day1.txt") as f:
     for line in f:
         left, right = line.split()
 
