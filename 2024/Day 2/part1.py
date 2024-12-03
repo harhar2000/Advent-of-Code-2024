@@ -12,9 +12,25 @@
 # Check each report against these rules and count how many reports are considered safe. 
 
 
+# Input: List of reports (each report is a number)
+
+# Function: is_report_safe(report)
+#   If report is not increasing and not decreasing:
+#       return False
+#   For each adjacent pair in report:
+#       If difference < 1 or difference > 3:
+#           Return False
+#   Return True
+
+# num_of_safe_reports = 0
+# For each report in input:
+#   If is_report_safe(report):
+#       num_of_safe_reports += 1
+# return num_of_safe_reports
 
 
-
-
-# with open("2024/files/day1.txt") as f:
-#     for line in f:
+with open("2024/files/day2.txt") as f:
+    reports = []
+    for line in f:
+        report = list(map(int, line.strip().split()))
+        
